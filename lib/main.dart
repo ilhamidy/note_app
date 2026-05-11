@@ -1,4 +1,6 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:noteapp/theme/app_theme.dart';
 import 'pages/home_page.dart';
 
@@ -28,7 +30,14 @@ class _MyAppState extends State<MyApp> {
       title: 'NoteApp',
       debugShowCheckedModeBanner: false,
       theme: isDark ? AppTheme.dark : AppTheme.light,
-      home: HomePage(onToggleTheme: toggleTheme),
+      home: AnimatedSplashScreen(
+        duration: 3000,
+        splash: Lottie.asset('assets/download.json'),
+        nextScreen: HomePage(onToggleTheme: toggleTheme),
+        splashTransition: SplashTransition.fadeTransition,
+        backgroundColor: Colors.white,
+        splashIconSize: 150,
+      ),
     );
   }
 }

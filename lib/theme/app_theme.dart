@@ -9,13 +9,14 @@ class AppTheme {
   static ThemeData light = ThemeData(
     brightness: Brightness.light,
 
-    //pengaturan warna halaman
+    //pengaturan warna global
     colorScheme: const ColorScheme.light(
       primary: Color(0xFF1565C0),
       secondary: Color(0xFF42A5F5),
       surface: Colors.white,
     ),
 
+    //ini untuk warna scaffold mode terang
     scaffoldBackgroundColor: const Color(0xFFF5F5F5),
 
     //pengaturan warna appbar
@@ -32,6 +33,7 @@ class AppTheme {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
     ),
 
+    //ini untuk dialog
     dialogTheme: DialogThemeData(
       backgroundColor: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -46,7 +48,7 @@ class AppTheme {
       ),
     ),
 
-    //pengaturan font tulisan
+    //pengaturan font tulisan aplikasi
     textTheme: baseText.copyWith(
       titleLarge: baseText.titleLarge?.copyWith(
         fontSize: 18,
@@ -65,10 +67,10 @@ class AppTheme {
   static ThemeData dark = ThemeData(
     brightness: Brightness.dark,
 
-    //pengaturan warna halaman
+    //pengaturan warna global
     colorScheme: const ColorScheme.dark(
-      primary: Color.fromRGBO(52, 47, 202, 1),
-      secondary: Color(0xFF64B5F6),
+      primary: Color.fromARGB(255, 6, 6, 249),
+      secondary: Color.fromARGB(255, 0, 28, 244),
       surface: Color(0xFF1E1E1E),
     ),
 
@@ -76,7 +78,7 @@ class AppTheme {
 
     //pengaturan warna appbar
     appBarTheme: const AppBarTheme(
-      backgroundColor: Color.fromARGB(255, 4, 0, 50),
+      backgroundColor: Color.fromARGB(255, 12, 0, 150),
       foregroundColor: Colors.white,
       elevation: 0,
     ),

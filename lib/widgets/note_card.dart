@@ -52,24 +52,29 @@ class NoteCard extends StatelessWidget {
             const SizedBox(height: 8),
 
             // AUTHOR
-            Text(note.author, style: theme.textTheme.bodySmall),
+            Text(
+              note.author,
+              style: theme.textTheme.bodySmall,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
 
             const SizedBox(height: 6),
 
-            // ACTION
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.end,
-            //   children: [
-            //     GestureDetector(
-            //       onTap: onDelete,
-            //       child: Icon(
-            //         Icons.delete,
-            //         size: 18,
-            //         color: theme.colorScheme.error,
-            //       ),
-            //     ),
-            //   ],
-            // ),
+            // ACTION opsional
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                  onTap: onDelete,
+                  child: Icon(
+                    Icons.delete,
+                    size: 18,
+                    color: theme.colorScheme.error,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
